@@ -4,11 +4,11 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Slides</title><!-- This is the title that will display on the browser tab -->
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+		<link rel="stylesheet" href="dist/theme/ASDL.css">
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
@@ -16,8 +16,52 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<h1>Title</h1>
+					<h2>Author</h2>
+				</section>
+				<section>
+					<h2>Slide Title</h2>
+					<p>
+						Paragraph section of words.<br>
+						Use &ltbr&gt to start a new line
+					</p>
+					<p class="callout">Callout box with important information</p>
+				</section>
+				<section>
+					<h2>Side-by-Side Example</h2>
+					<p>Can have text above the side-by-side</p>
+					<div class="grid-container-1x2">
+						<div class="box">
+							<p>Similar to PowerPoint templates</p>
+							<ul>
+								<li>Can have some information</li>
+								<li>on the left</li>
+								<li>and some on the right</li>
+							</ul>
+							<p>Useful for common scenario of text next to images</p>
+						</div>
+						<div class="box">
+							<img src="https://www.asdl.gatech.edu/images/hero/ASDL-Icon-sketchy-blue+gold.gif" alt="ASDL Fancy Logo">
+						</div>
+					</div>
+					<p class="callout" style="width: 30%;margin: auto;">Even a callout on the bottom</p>
+					<p>Note: style width and "margin: auto" size and center the callout box</p>
+				</section>
+				<section data-markdown data-separator="---">
+					<textarea data-template>
+						## reveal.js Built-in Markdown Formatting
+						---
+						## Markdown-Style info
+						- Lists
+						- of
+						- things
+						---
+						## data-separator : new slide
+						1. [Markdown Cheatsheet](https://www.markdownguide.org/cheat-sheet/)
+						1. Use this to learn formatting
+					</textarea>
+				</section>
 			</div>
 		</div>
 
@@ -38,3 +82,10 @@
 		</script>
 	</body>
 </html>
+
+<script>
+	Reveal.initialize({
+		width: 1920,
+		height: 1080
+	})  // Wide-screen aspect ratio
+</script>
